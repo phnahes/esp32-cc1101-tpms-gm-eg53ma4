@@ -1,0 +1,21 @@
+# row= hex string, bit count from the serial log
+# Clean 120-bit frame: 40 zeros + 10 bytes.
+00000000004d9200520066e91a5af4 120
+
+# 121-bit row with the inverted-sync alignment artifact.
+# It normalizes to 00000000004D930052006AC655550C0.
+7FFFFFFFFFCD930052006AC655550C0 121
+
+# Truncated rows: not enough payload bits, or a checksum that does not close.
+00000000009B2400A400 79
+00000000004D9300520066E948 101
+00000000009B2600A400 78
+0000009B2600A400CD4CC2ABE8 104
+
+# Truncated inverted-sync prefixes.
+7FFF 16
+7FFFFFFFFF 40
+
+# Synthetic: clean frame with the last bit removed. The missing bit is 0,
+# so the conditional 119-bit repair should recover it.
+00000000004d9200520066e91a5af4 119
