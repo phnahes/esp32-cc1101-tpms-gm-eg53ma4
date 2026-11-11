@@ -154,6 +154,16 @@ Not covered without hardware:
 
 The firmware compiles for the ESP32-S3, but the RF path still needs a board and a sensor for full validation.
 
+## Hardware validation checklist
+
+- [ ] Boot prints `PARTNUM=0x00`, `VERSION=0x14`, `MARC=0x0D`.
+- [ ] Self-test prints `pass=5 fail=0`.
+- [ ] Sending a known row on the serial console prints the expected frame.
+- [ ] A pressure change wakes the sensor and produces `[frame]` lines.
+- [ ] The decoded ID, pressure, and temperature match the Python reference decoder.
+- [ ] GDO0 shows pulses around 123 µs on a logic analyzer.
+- [ ] Antenna range and in-car behavior are checked separately.
+
 ## Limits
 
 - The header whitelist (`0x4D920052`, `0x4D930052`, `0x4C960052`) is fitted to the sensors used in the article. Edit `kHeaders` in `src/decode_eg53ma4.cpp` for another batch.
