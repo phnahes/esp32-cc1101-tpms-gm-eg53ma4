@@ -4,6 +4,8 @@ Reference receiver and decoder for the Schrader **EG53MA4** 433.92 MHz TPMS sens
 
 This is a standalone reference implementation for the article. It is not the product firmware. It has no NVS mapping, WiFi portal, OTA, cache, or ID-to-wheel bookkeeping. It configures the radio, captures GDO0, slices the Manchester waveform, decodes the frame, and prints the fields on the serial console.
 
+**Article:** [From Noise to Tire Pressure: Reverse Engineering a 433 MHz TPMS Protocol](https://medium.com/@phnahes/from-noise-to-tire-pressure-reverse-engineering-a-433-mhz-tpms-protocol-1bd8e7c28920)
+
 ## Hardware
 
 - ESP32-S3 board (the example uses `esp32-s3-devkitc-1`; any ESP32 with the same pins works).
@@ -176,4 +178,4 @@ The firmware compiles for the ESP32-S3, but the RF path still needs a board and 
 
 The frame model comes from the EG53MA4 decoder in [`rtl_433`](https://github.com/merbanan/rtl_433), contributed by **Leonardo Hamada** (`hkazu`). That project is GPL-2.0; this reference implementation is distributed under **GPL-2.0-or-later**. See `LICENSE`.
 
-Article: link to be added when the Medium post is published.
+Article: [From Noise to Tire Pressure: Reverse Engineering a 433 MHz TPMS Protocol](https://medium.com/@phnahes/from-noise-to-tire-pressure-reverse-engineering-a-433-mhz-tpms-protocol-1bd8e7c28920)

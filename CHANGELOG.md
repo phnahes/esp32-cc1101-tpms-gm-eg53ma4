@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.2 - 2026-11-12
+
+- Link the Medium article in the README and the Python README.
+
+## v0.1.1 - 2026-11-11
+
+- Add a hardware validation checklist to the README.
+
 ## v0.1.0 - 2026-11-11
 
 - Initial public release.

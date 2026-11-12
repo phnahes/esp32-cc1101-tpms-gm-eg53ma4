@@ -91,4 +91,4 @@ The 119-bit synthetic row (the clean frame with the last bit removed) is recover
 
 The frame model comes from the EG53MA4 decoder in [`rtl_433`](https://github.com/merbanan/rtl_433), contributed by **Leonardo Hamada** (`hkazu`). That project is GPL-2.0; this reference decoder is distributed under **GPL-2.0-or-later**. See `../LICENSE`.
 
-Article: link to be added when the Medium post is published.
+Article: [From Noise to Tire Pressure: Reverse Engineering a 433 MHz TPMS Protocol](https://medium.com/@phnahes/from-noise-to-tire-pressure-reverse-engineering-a-433-mhz-tpms-protocol-1bd8e7c28920)
